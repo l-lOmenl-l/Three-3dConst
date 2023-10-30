@@ -4,13 +4,21 @@ import {BuildCloset} from './construct.js'
 import {params_closet} from "./closet.js";
 
 const params = {
+    amount_section: params_closet.amount_section,
     z: params_closet.z,
     x: params_closet.x,
     y: params_closet.y
 };
 
 const gui = new GUI();
+
 gui.title("Construct")
+
+gui.add( params, 'amount_section',2, 5, 1).name( 'amount_section' ).onChange( function ( value ) {
+    params_closet.amount_section = value
+    BuildCloset()
+} );
+
 gui.add( params, 'z',50, 300, 1).name( 'height' ).onChange( function ( value ) {
     params_closet.z = value
     BuildCloset()
