@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+
 class closet{
     constructor(series, option,amount_section, height, width, depth, materialCorpus, materialProfile) {
         this.series = series
