@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {params_closet} from './closet.jsx'
 import {scene} from './scene.jsx'
-import venge from '../../../../textures/venge.jpg'
+import venge from '../../../../textures/DubTabac.jpg'
 
 //let geometry = new THREE.BoxGeometry( params_closet.x, params_closet.z ,params_closet.y );
 const texture = new THREE.TextureLoader().load(venge);
