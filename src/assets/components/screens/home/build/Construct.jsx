@@ -1,19 +1,19 @@
 import * as THREE from 'three';
-import {params_closet} from './closet.js'
-import {scene} from "./scene.js";
+import {params_closet} from './closet.jsx'
+import {scene} from './scene.jsx'
+import venge from '../../../../textures/venge.jpg'
 
-let geometry = new THREE.BoxGeometry( params_closet.x, params_closet.z ,params_closet.y );
-const texture = new THREE.TextureLoader().load('textures/венге.jpg' );
+//let geometry = new THREE.BoxGeometry( params_closet.x, params_closet.z ,params_closet.y );
+const texture = new THREE.TextureLoader().load(venge);
 const material = new THREE.MeshBasicMaterial( { map: texture } );
 let startZ = params_closet.z/2*-1
 
-export function BuildCloset(){
+export default function BuildCloset(){
     //Clear all meshes closet
     clearCloset()
-
     //spawn pedestal
     let pedestal = new THREE.Mesh(new THREE.BoxGeometry(params_closet.x-10, 5 ,params_closet.y), material)
-    params_closet.mesh.push (pedestal)
+    params_closet.mesh.push(pedestal)
     pedestal.position.y = startZ
 
     //spawn bottom closet
@@ -31,7 +31,7 @@ export function BuildCloset(){
     //spawn side closet
     for (let i=0; i <= params_closet.amount_section; i++){
         let tempSide = new THREE.Mesh(new THREE.BoxGeometry(2, params_closet.z - 7 ,params_closet.y), material)
-
+        
         tempSide.position.x = firstPos
         firstPos = firstPos + params_closet.x/amount
 
@@ -50,19 +50,14 @@ export function BuildCloset(){
     xdf.position.z = params_closet.y / 2 * -1
     params_closet.mesh.push (xdf)
 
-    params_closet.mesh.forEach(function(item, i, arr) {
+    params_closet.mesh.forEach(function(item) {
         scene.add(item)
+        
     });
 }
-
-BuildCloset()
-
-export function clearCloset(){
-    params_closet.mesh.forEach(function(item, i, arr) {
+function clearCloset(){
+    params_closet.mesh.forEach(function(item) {
         scene.remove(item)
     });
     params_closet.mesh.length = 0
 }
-
-
-
