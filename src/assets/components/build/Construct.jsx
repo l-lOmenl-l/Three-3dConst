@@ -20,24 +20,43 @@ export default function BuildCloset(){
     bottom.position.y = pedestal.position.y + 2
     params_closet.mesh.push (bottom)
 
-    let amount = params_closet.amount_section
-    if (params_closet.amount_section > 2){
-        amount += 1
-    }
 
-    let firstPos = (params_closet.sizes.width/amount) * -1;
+
 
     //spawn side closet
+    let firstPos = (params_closet.sizes.width/2) * -1;
+
+
+
+
+
+
+
+
     for (let i=0; i <= params_closet.amount_section; i++){
         let tempSide = new THREE.Mesh(new THREE.BoxGeometry(2, params_closet.sizes.height - 7 ,params_closet.sizes.depth), material)
         
         tempSide.position.x = firstPos
-        firstPos = firstPos + params_closet.sizes.width/amount
+        firstPos = firstPos + params_closet.sizes.width/params_closet.amount_section
 
         tempSide.position.y = params_closet.sizes.height/2-2
 
         params_closet.mesh.push (tempSide)
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //spawn top closet
     let top = new THREE.Mesh(new THREE.BoxGeometry(params_closet.sizes.width, 2 ,params_closet.sizes.depth), material)
     top.position.y = params_closet.sizes.height - 6.5
