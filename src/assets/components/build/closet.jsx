@@ -1,3 +1,5 @@
+import * as THREE from "three";
+
 class closet{
     constructor(series, option,amount_section, height, width, depth, materialCorpus, materialProfile) {
         this.series = series
@@ -19,16 +21,14 @@ class closet{
     }
 }
 export let params_closet = new closet(
-                                                "Экспресс",
-                                                "standart",
+                                                "ШК",
+                                                "",
                                                 2,
                                                 220,
                                                 180,
                                                 60,
-                                                "Дуб Табачный",
+                                                0,
                                                 "Серебро"
                                                 )
 
-params_closet.get_size()
-params_closet.get_material()
 

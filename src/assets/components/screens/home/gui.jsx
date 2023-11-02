@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import BuildCloset from '../../build/Construct';
 import {params_closet} from '../../build/closet'
 import materialJson from '../../build/material.json'
+import {changeMaterialCloset} from "../../build/Construct.jsx";
 
 //Интерфейс изменения высоты
 export function ChangeHeight() {
@@ -63,12 +64,19 @@ export function ChangeSection() {
 
 //Интерфейс выборки материала
 export function ChangeMaterial() {
-    console.log(materialJson)
+
+    const [section,set] = useState(params_closet.materials)
+    function handleChange (e){
+        set(params_closet.materials.corpus = Number(e.target.name))
+        console.log(Number(e.target.name))
+        changeMaterialCloset();
+    }
+
     return(
         <div className={styles.lineSlider}>
             {materialJson.map((item, index) => {
                 return (
-                    <div key={index} className={styles.circleMaterial} style={{backgroundImage:`url(${item.url})`}}></div>
+                    <button key={index} name={index} className={styles.circleMaterial}  onClick={e=>handleChange(e)} style={{backgroundImage:`url(${item.url})`}} />
                 );
             })}
         </div>
