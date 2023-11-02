@@ -1,9 +1,3 @@
-import styles from "../Home.module.css";
-import {useState} from "react";
-import {range} from "three/nodes";
-import BuildCloset from './Construct';
-import React from "react";
-
 class closet{
     constructor(series, option,amount_section, height, width, depth, materialCorpus, materialProfile) {
         this.series = series
@@ -34,9 +28,6 @@ export let params_closet = new closet(
                                                 "Дуб Табачный",
                                                 "Серебро"
                                                 )
-
-
-
 
 params_closet.get_size()
 params_closet.get_material()
