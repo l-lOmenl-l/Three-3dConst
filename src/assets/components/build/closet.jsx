@@ -1,4 +1,3 @@
-
 class closet{
     constructor(series, option,amount_section, height, width, depth, materialCorpus, materialProfile) {
         this.series = series
@@ -7,6 +6,7 @@ class closet{
         this.sizes = {height: height, width: width, depth: depth}
         this.materials = {corpus: materialCorpus, profile: materialProfile}
         this.mesh = []
+
         this.get_size = function ()
         {
             console.log(this.sizes)
@@ -18,7 +18,17 @@ class closet{
         }
     }
 }
-export  let params_closet = new closet("Экспресс", "standart", 2, 220, 180, 60, "Дуб Табачный", "Серебро")
+export let params_closet = new closet(
+                                                "Экспресс",
+                                                "standart",
+                                                2,
+                                                220,
+                                                180,
+                                                60,
+                                                "Дуб Табачный",
+                                                "Серебро"
+                                                )
+
 params_closet.get_size()
 params_closet.get_material()
 

@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import {params_closet} from './closet.jsx'
 import {scene} from './scene.jsx'
-import venge from '../../../../textures/DubTabac.jpg'
+import jpg from '../../textures/DubTabac.jpg'
 
 
-const texture = new THREE.TextureLoader().load(venge);
+const texture = new THREE.TextureLoader().load(jpg);
 const material = new THREE.MeshBasicMaterial( { map: texture } );
 
 export default function BuildCloset(){
