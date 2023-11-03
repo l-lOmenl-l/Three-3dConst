@@ -4,6 +4,7 @@ import BuildCloset from '../../build/Construct';
 import {params_closet} from '../../build/closet'
 import materialJson from '../../build/material.json'
 import {changeMaterialCloset} from "../../build/Construct.jsx";
+import { events } from "@react-three/fiber";
 
 //Интерфейс изменения высоты
 export function ChangeHeight() {
@@ -66,9 +67,9 @@ export function ChangeSection() {
 export function ChangeMaterial() {
 
     const [section,set] = useState(params_closet.materials)
-    function handleChange (e){
-        set(params_closet.materials.corpus = Number(e.target.name))
-        console.log(Number(e.target.name))
+    function handleChange (index){
+        set(params_closet.materials.corpus = Number(index))
+        console.log(Number(index))
         changeMaterialCloset();
     }
 
@@ -76,7 +77,7 @@ export function ChangeMaterial() {
         <div className={styles.lineSlider}>
             {materialJson.map((item, index) => {
                 return (
-                    <button key={index} name={index} className={styles.circleMaterial}  onClick={e=>handleChange(e)} style={{backgroundImage:`url(${item.url})`}} />
+                    <button key={index} className={styles.circleMaterial}  onClick={()=>handleChange(index)} style={{backgroundImage:`url(${item.url})`}} />
                 );
             })}
         </div>
