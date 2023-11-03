@@ -61,12 +61,11 @@ function clearCloset(){
 }
 
 export function changeMaterialCloset(){
+    let texture = new THREE.TextureLoader().load(materialJson[params_closet.materials.corpus].url);
+    let material = new THREE.MeshBasicMaterial( { map: texture } );
     params_closet.mesh.forEach(function(item) {
-        let texture = new THREE.TextureLoader().load(materialJson[params_closet.materials.corpus].url);
-        let material = new THREE.MeshBasicMaterial( { map: texture } );
         if (item.name != "xdf"){
             item.ref.material = material
         }
-
     });
 }
