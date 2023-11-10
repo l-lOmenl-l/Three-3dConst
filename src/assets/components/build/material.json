@@ -1,10 +1,38 @@
-[
-    {
-        "id":1,
-        "url":"/src/assets/textures/DubTabac.jpg"
-    },
-    {
-        "id":2,
-        "url":"/src/assets/textures/venge.jpg"
+{
+    "шк": {
+        "corpus": [
+            {
+                "name": "Венге",
+                "url": "/src/assets/textures/ldsp/wenge.jpg"
+            },
+            {
+                "name": "Венге Мали",
+                "url": "/src/assets/textures/ldsp/wengeMali.jpg"
+            },
+            {
+                "name": "Дуб молочный",
+                "url": "/src/assets/textures/ldsp/milkyOak.jpg"
+            },
+            {
+                "name": "Ясень шимо светлый",
+                "url": "/src/assets/textures/ldsp/shimoAshLight.jpg"
+            },
+            {
+                "name": "Ясень шимо темный",
+                "url": "/src/assets/textures/ldsp/shimoDarkAsh.jpg"
+            },
+            {
+                "name": "Сонома",
+                "url": "/src/assets/textures/ldsp/sonomaOak.jpg"
+            },
+            {
+                "name": "Бетон",
+                "url": "/src/assets/textures/ldsp/сoncrete.jpeg"
+            },
+            {
+                "name": "Дуб табачный",
+                "url": "/src/assets/textures/ldsp/сraftTobaccoOak.jpg"
+            }
+        ]
     }
-]
+}

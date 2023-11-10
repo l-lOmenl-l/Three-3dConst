@@ -13,11 +13,11 @@ export const scene = new THREE.Scene();
 
     document.body.appendChild(renderer.domElement)
 
-
-    const controls = new OrbitControls( camera, renderer.domElement );
     camera.position.z=400
     camera.position.x=0
     camera.position.y=0
+    const controls = new OrbitControls( camera, renderer.domElement );
+
     controls.update();
 
     function render() {

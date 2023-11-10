@@ -5,6 +5,7 @@ import {params_closet} from '../../build/closet'
 import materialJson from '../../build/material.json'
 import {changeMaterialCloset} from "../../build/Construct.jsx";
 import { events } from "@react-three/fiber";
+import * as THREE from "three";
 
 //Интерфейс изменения высоты
 export function ChangeHeight() {
@@ -64,23 +65,35 @@ export function ChangeSection() {
 }
 
 //Интерфейс выборки материала
+
 export function ChangeMaterial() {
 
     const [section,set] = useState(params_closet.materials)
     function handleChange (index){
-        set(params_closet.materials.corpus = Number(index))
-        console.log(Number(index))
+        let data = JSON.parse(JSON.stringify(materialJson))
+        let texture = new THREE.TextureLoader().load(data["шк"].corpus[index].url);
+        let material = new THREE.MeshBasicMaterial( { map: texture } );
+        material.name = data["шк"].corpus[index].name
+        set(params_closet.materials.corpus = material)
         changeMaterialCloset();
     }
-
+    function getArray(){
+        let data = JSON.parse(JSON.stringify(materialJson))
+        return data["шк"].corpus
+    }
     return(
         <div className={styles.lineSlider}>
-            {materialJson.map((item, index) => {
-                return (
+            {getArray().map((item, index) => {
+             return (
+                 <div>
                     <button key={index} className={styles.circleMaterial}  onClick={()=>handleChange(index)} style={{backgroundImage:`url(${item.url})`}} />
+                    <p>{item.name}</p>
+                 </div>
                 );
             })}
         </div>
     )
+
+
 }
 
