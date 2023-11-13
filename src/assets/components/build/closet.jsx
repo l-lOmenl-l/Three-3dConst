@@ -24,7 +24,7 @@ class closet{
 
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", "http://127.0.0.1:8100/albums", false ); // false for synchronous request
-xmlHttp.setRequestHeader("ccess-Control-Allow-Origin", "*")
+xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*")
 xmlHttp.send();
 console.log(xmlHttp.responseText) 
 
