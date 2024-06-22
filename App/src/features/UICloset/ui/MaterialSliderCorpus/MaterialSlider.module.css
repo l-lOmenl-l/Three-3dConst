@@ -1,0 +1,26 @@
+.blockContent{
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    display: flex !important;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.materialBlock{
+    margin-bottom: 8%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.materialBlock:not(:first-child){
+    margin-left: 1%;
+}
+.titleOption{
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 500;
+    font-family: Avenir,-apple-system,BlinkMacSystemFont,
+    'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,
+    'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji',sans-serif;
+}
