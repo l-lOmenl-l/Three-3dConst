@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './assets/styles/global.css'
-import Main from './apps/main'
+import App from './apps/app.tsx'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-            <Main />
+            <App />
   </React.StrictMode>,
 )

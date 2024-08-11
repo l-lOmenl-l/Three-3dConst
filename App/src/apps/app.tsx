@@ -1,11 +1,10 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom"
 import { ConfigProvider } from 'antd'
 import { config } from '../config/theme'
 import RouteMap from '../processes/routes'
 type Props = {}
 
-const Main = (props: Props) => {
+const App = (props: Props) => {
     return (
         <BrowserRouter>
             <ConfigProvider theme={config}>
@@ -15,4 +14,4 @@ const Main = (props: Props) => {
     )
 }
 
-export default Main
+export default App
