@@ -1,4 +1,4 @@
-import materialJson from '../src/config/material.json'
+import materialJson from '../config/material.json'
 import * as THREE from "three";
 
 
