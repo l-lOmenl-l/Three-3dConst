@@ -18,7 +18,6 @@ interface ICloset{
     materials:IMaterials,
     section:number,
     mesh:object[]
-    
 }
 
 class Closet implements ICloset{
@@ -49,15 +48,6 @@ class Closet implements ICloset{
     }
 }
 
-const data = JSON.parse(JSON.stringify(materialJson))
-console.log(data["шк"].corpus[0].name + ": " +data["шк"].corpus[0].url)
-console.log(data["шк"].corpus)
-const texture = new THREE.TextureLoader().load(data["шк"].corpus[0].url);
-
-const material = new THREE.MeshBasicMaterial( { map: texture } );
-material.name = data["шк"].corpus[0].name
-
-
-const closet = new Closet(220,180,60,2,[],material,'Серебро')
+const closet = new Closet(220,180,60,2,[],'','Серебро')
 
 export default closet

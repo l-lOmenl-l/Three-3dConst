@@ -7,9 +7,9 @@ import {
   WebGLRenderer,
 } from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
-import Build from "./build.js";
+import Build from "./build.tsx";
 
-export const scene = new THREE.Scene();
+export const scene :THREE.Scene = new THREE.Scene();
 
 export function RenderScene() {
   const canvasRef = useRef<HTMLCanvasElement>(null)

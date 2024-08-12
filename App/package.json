@@ -7,13 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "genapi": "npx swagger-typescript-api -p http://192.168.40.135:8400/swagger/?format=openapi -o ./src/generated --modular --axios"
   },
   "dependencies": {
     "@react-three/drei": "^9.97.3",
     "@react-three/fiber": "^8.15.16",
     "antd": "^5.14.0",
     "axios": "^1.6.7",
+    "npx": "^10.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-jwt": "^1.2.1",
@@ -21,6 +23,7 @@
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.21.2",
     "redux": "^5.0.1",
+    "swagger-typescript-api": "13.0.10",
     "three": "^0.161.0"
   },
   "devDependencies": {
