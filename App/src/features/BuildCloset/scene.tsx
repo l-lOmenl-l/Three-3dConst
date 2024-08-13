@@ -30,7 +30,6 @@ export function RenderScene() {
       renderer.render(scene, camera);
     }
     render();
-    Build(scene);
   }, [])
 
   return (

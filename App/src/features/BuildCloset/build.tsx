@@ -1,13 +1,21 @@
 import * as THREE from 'three';
-import closet from '../../entities/closet.js';
+import product from '../../entities/testProduct.tsx';
 import { SceneProps } from '@react-three/fiber';
+import buildBase from './components/base.js';
+import buildFloor from './components/floor.tsx';
+import buildStanding from './components/standing.tsx';
 
 
+function clearAllMesh(scene:SceneProps){
+    for (let i = 0; i < scene.children.length; i++) {
+        scene.remove(scene.children[i])
+    }
+}
 
-export default function Build(scene:SceneProps){
-    const  pedestal :THREE.Mesh= new THREE.Mesh(new THREE.BoxGeometry(closet.sizes.width-10, 5 ,closet.sizes.depth))
-    scene.add(pedestal)
-
-    
+export default function BuildProduct(scene:SceneProps){
+    clearAllMesh(scene)
+    buildBase(scene, product)
+    buildFloor(scene, product)
+    buildStanding(scene, product)
 }
 
