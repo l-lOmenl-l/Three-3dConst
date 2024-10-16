@@ -1,0 +1,60 @@
+{
+    "шк": {
+        "corpus": [
+            {
+                "name": "Венге",
+                "url": "/textures/ldsp/wenge.jpg"
+            },
+            {
+                "name": "Венге Мали",
+                "url": "/textures/ldsp/wengeMali.jpg"
+            },
+            {
+                "name": "Дуб молочный",
+                "url": "/textures/ldsp/milkyOak.jpg"
+            },
+            {
+                "name": "Ясень шимо светлый",
+                "url": "/textures/ldsp/shimoAshLight.jpg"
+            },
+            {
+                "name": "Ясень шимо темный",
+                "url": "/textures/ldsp/shimoDarkAsh.jpg"
+            },
+            {
+                "name": "Сонома",
+                "url": "/textures/ldsp/sonomaOak.jpg"
+            },
+            {
+                "name": "Бетон",
+                "url": "/textures/ldsp/сoncrete.jpeg"
+            },
+            {
+                "name": "Дуб табачный",
+                "url": "/textures/ldsp/сraftTobaccoOak.jpg"
+            }
+        ],
+        "profile": [
+            {
+                "name": "Серебро",
+                "color": "#A9A9A9"
+            },
+            {
+                "name": "Черный",
+                "color": "#000000"
+            },
+            {
+                "name": "Белый",
+                "color": "#FFFFFF"
+            },
+            {
+                "name": "Бронза",
+                "color": "#767044"
+            },
+            {
+                "name": "Золото",
+                "color": "#F1CD79"
+            }
+        ]
+    }
+}
